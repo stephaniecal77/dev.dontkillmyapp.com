@@ -1,0 +1,1337 @@
+<!doctype html>
+<html amp lang="id" itemscope="itemscope" itemtype="https://schema.org/WebPage">
+<head>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript> <style amp-boilerplate> body { -webkit-animation: none; -moz-animation: none; -ms-animation: none; animation: none } </style> </noscript>
+    <style amp-custom>
+        :root {
+            --small-font: 12px;
+            --normal-font: 14px;
+            --large-font: 16px;
+            --x-large-font: 18px
+        }
+
+        body {
+            font-size: var(--small-font);
+            display: flex;
+            flex-direction: column;
+            padding-top: 54px;
+            padding-bottom: 52px
+        }
+
+        a {
+            text-decoration: none
+        }
+
+        summary {
+            outline: none
+        }
+
+        .container {
+            align-self: center;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .logo-container {
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99
+        }
+
+        .logo-container .logo {
+            width: calc(38px*180/45);
+            display: block
+        }
+
+        .logo-container .logo amp-img {
+            flex-grow: 1
+        }
+
+        .site-menu {
+            width: 60%;
+            background-color: #01091a
+        }
+
+        .site-menu amp-img {
+            margin-right: 10px
+        }
+
+        .site-menu amp-img.chevron-right {
+            position: absolute;
+            right: 0;
+            filter: invert(1);
+            transition: transform .3s;
+            transform-origin: center
+        }
+
+        .site-menu details[open]>summary>section>amp-img.chevron-right {
+            transform: rotate(90deg)
+        }
+
+        .site-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: var(--large-font)
+        }
+
+        .site-menu li+li,
+        .site-menu summary,
+        .site-menu article>ul {
+            margin-top: 2px
+        }
+
+        .site-menu li>a,
+        .site-menu summary {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background-color: #0d1b39;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer
+        }
+
+        .site-menu details details summary,
+        .site-menu details li>a {
+            padding-left: 45px;
+            background-color: #06122c;
+            cursor: pointer
+        }
+
+        .site-menu details details li>a {
+            padding-left: 75px;
+            background-color: #040d20;
+            cursor: pointer
+        }
+
+        .site-menu-hamburger {
+            height: 18px;
+            width: 18px;
+            margin: 0;
+            position: absolute;
+            right: 25px;
+            cursor: pointer
+        }
+
+        .site-menu-trigger [data-icon=menu] {
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 58%;
+            bottom: auto;
+            right: auto;
+            transform: translateX(-50%) translateY(-50%);
+            width: 18px;
+            height: 2px;
+            background-color: #8e8e8e;
+            transition: .5s ease-in-out
+        }
+
+        .site-menu-trigger [data-icon=menu]:before,
+        .site-menu-trigger [data-icon=menu]:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: inherit;
+            left: 0
+        }
+
+        .site-menu-trigger [data-icon=menu]:before {
+            bottom: 5px
+        }
+
+        .site-menu-trigger [data-icon=menu]:after {
+            top: 5px
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: center;
+            font-size: var(--x-large-font);
+            padding: 0;
+            width: 100%
+        }
+
+        .link-container a {
+            width: 50%;
+            text-align: left;
+            padding: 15px 20px;
+            text-transform: uppercase
+        }
+
+        .login-button,
+        .register-button {
+            color: #fff
+        }
+
+        .main-menu-container {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 10px 0;
+            background-color: #02071c
+        }
+
+        .main-menu-container li {
+            flex-basis: calc(25% - 10px);
+            padding: 5px
+        }
+
+        .main-menu-container li a {
+            display: flex;
+            padding: 5px 0;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            font-size: var(--normal-font);
+            text-transform: uppercase
+        }
+
+        .main-menu-container li amp-img {
+            margin: 8px 0
+        }
+
+        .jackpot-container {
+            display: flex;
+            justify-content: center;
+            position: relative
+        }
+
+        .jackpot-container .jackpot-prize {
+            color: #fff
+        }
+
+        .jackpot-container .jackpot-currency {
+            color: #03ffd8
+        }
+
+        .footer-container {
+            text-align: center
+        }
+
+        .footer-container .bank-list,
+        .footer-container .social-media-list,
+        .footer-container .contact-list,
+        .footer-container .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            padding: 10px 0;
+            list-style-type: none
+        }
+
+        .footer-container .contact-list li {
+            flex-basis: 50%
+        }
+
+        .footer-container .contact-list li a {
+            margin: 5px 10px;
+            display: flex;
+            align-items: center;
+            background-color: #040a2a;
+            border-radius: 5px;
+            color: #fff;
+            font-size: var(--normal-font)
+        }
+
+        .footer-container .contact-list>li a i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            width: 36px;
+            height: 36px;
+            margin-right: 20px;
+            border-radius: 15%;
+            background: #51c332
+        }
+
+        .footer-container .contact-list>li a i amp-img {
+            margin: 5px;
+            flex-basis: 0;
+            -ms-flex-preferred-size: 0;
+            -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1
+        }
+
+        .footer-container .social-media-list {
+            justify-content: center
+        }
+
+        .footer-container .social-media-list li {
+            flex-basis: 25%
+        }
+
+        .footer-container .bank-list {
+            justify-content: center
+        }
+
+        .footer-container .bank-list li {
+            flex-basis: 25%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 10px;
+            height: 27px
+        }
+
+        .footer-container .bank-list span[data-online='true'],
+        .footer-container .bank-list span[data-online='false'] {
+            width: 5px;
+            margin-right: 5px;
+            border-radius: 2px
+        }
+
+        .footer-container .bank-list span[data-online='true'] {
+            background-color: #f3cf02
+        }
+
+        .footer-container .bank-list span[data-online='false'] {
+            background-color: rgb(238, 163, 0)
+        }
+
+        .footer-container .footer-links {
+            background-color: #0a1749;
+            flex-wrap: wrap;
+            justify-content: center
+        }
+
+        .footer-container .footer-links li {
+            flex-basis: calc(25% - 3px);
+            margin-bottom: 5px
+        }
+
+        .footer-container .footer-links>li:not(:nth-child(5n+5)):not(:first-child) {
+            border-left: 1px solid #fff
+        }
+
+        .footer-container .footer-links li a {
+            padding: 5px;
+            color: #fff;
+            font-size: var(--normal-font)
+        }
+
+        .site-description {
+            background-color: #273341;
+            padding: 10px
+        }
+
+        .footer-container h1,
+        .footer-container h2,
+        .footer-container h3,
+        .footer-container h4 {
+            display: block
+        }
+
+        .copyright {
+            padding: 25px 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center
+        }
+
+        .copyright div {
+            padding-bottom: 10px
+        }
+
+        .fixed-footer {
+            display: flex;
+            justify-content: space-around;
+            position: fixed;
+            background-color: #000000;
+            padding: 5px 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 99
+        }
+
+        .fixed-footer a {
+            flex-basis: calc((100% - 15px*6)/5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #999
+        }
+
+        .fixed-footer a.active {
+            color: #0195ff
+        }
+
+        @media(min-width:768px) {
+            body {
+                font-size: var(--normal-font)
+            }
+            .container {
+                width: 970px
+            }
+            .site-menu {
+                width: 20%
+            }
+        }
+
+        @media(min-width:1200px) {
+            .container {
+                width: 1170px
+            }
+        }
+
+        @media(min-width:992px) {
+            .container {
+                width: 970px
+            }
+        }
+
+        @font-face {
+            font-family: 'Verdana';
+            src: url('/fonts/Lato-Regular.woff2') format('woff2'), url('/fonts/Lato-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal
+        }
+
+        @keyframes pulse {
+            0% {
+                filter: initial
+            }
+            50% {
+                filter: brightness(40.5) drop-shadow(0 0 10px white)
+            }
+        }
+
+        body {
+            font-family: 'Verdana';
+            background-color: #0a0814
+        }
+
+        .logo-container {
+            justify-content: space-between;
+            padding: 0;
+            background-color: #17132d
+        }
+
+        .logo-container .logo {
+            padding: 10px
+        }
+
+        .header-right {
+            display: flex;
+            justify-content: space-between;
+            min-width: 100px;
+            align-self: stretch
+        }
+
+        .header-right .register-section {
+            align-self: stretch;
+            align-items: center;
+            display: flex;
+            border-right-width: 0px;
+            border-right-style: groove;
+            border-right-color: #4d5054;
+            padding: 10px 15px
+        }
+
+        .header-right .register-section a {
+            padding: 7px 15px
+        }
+
+        .header-right .hamburger-section {
+            align-self: center;
+            padding: 10px 0 10px 10px;
+            margin: 10px 0 10px 10px
+        }
+
+        .site-menu-hamburger {
+            position: initial;
+            right: initial
+        }
+
+        .site-menu-trigger [data-icon=menu] {
+            position: initial;
+            left: initial;
+            right: initial;
+            top: initial;
+            bottom: initial;
+            background-color: #f41168
+        }
+
+        .site-menu-trigger [data-icon="menu"]:before,
+        .site-menu-trigger [data-icon="menu"]:after {
+            right: 0;
+            left: initial
+        }
+
+        .site-menu-trigger [data-icon="menu"]:before {
+            width: 14px
+        }
+
+        .site-menu-trigger [data-icon="menu"]:after {
+            width: 22px
+        }
+
+        .site-menu {
+            background-color: #09020e
+        }
+
+        .site-menu li+li,
+        .site-menu summary,
+        .site-menu article>ul {
+            margin-top: 0
+        }
+
+        .site-menu li+li,
+        .site-menu details article {
+            border-top: 2px solid #190620
+        }
+
+        .site-menu li>a,
+        .site-menu summary,
+        .site-menu details details summary,
+        .site-menu details li>a,
+        .site-menu details details li>a {
+            border-left: 3px solid #856f94;
+            color: #766284;
+            background-color: #09020e
+        }
+
+        .site-menu>ul>li:first-child>a,
+        .site-menu details[open]>summary,
+        .site-menu details[open]>summary details[open]>summary {
+            border-left-color: #f60086;
+            color: #fff
+        }
+
+        .register-button,
+        .login-button {
+            border-radius: 5px
+        }
+
+        .link-container {
+            padding: 20px 0;
+            font-size: var(--normal-font);
+            background-color: #084654;
+            background-image: linear-gradient(to right, #ffd000 0%, #663e02 100%)
+        }
+
+        .link-container a {
+            margin-top: 10px;
+            width: auto;
+            padding: 5px 15px;
+            margin-left: 10px;
+            align-self: center
+        }
+
+        amp-carousel.main-menu-container .amp-carousel-button:not(.amp-disabled) {
+            animation: none;
+            visibility: visible
+        }
+
+        amp-carousel.main-menu-container div.amp-carousel-button-next,
+        amp-carousel.main-menu-container div.amp-carousel-button-prev {
+            opacity: 1;
+            pointer-events: initial
+        }
+
+        .amp-carousel-button-prev {
+            left: 0
+        }
+
+        .amp-carousel-button-next {
+            right: 0
+        }
+
+        .main-menu-container {
+            padding: 0 0 10px 0;
+            justify-content: center;
+            background-color: #0a0814
+        }
+
+        .main-menu-container .amp-carousel-button-next,
+        .main-menu-container .amp-carousel-button-prev {
+            width: 20px;
+            height: 100%;
+            background-color: #fe0178;
+            color: #fff
+        }
+
+        .main-menu-container li a {
+            font-size: var(--small-font);
+            color: #736d99;
+            padding: 10px
+        }
+
+        .jackpot-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d0b18;
+            color: #fff;
+            text-shadow: 0 2px 22px #ed00ff;
+            font-size: var(--x-large-font);
+            text-transform: uppercase;
+            padding: 10px 0
+        }
+
+        .popular-game-title-container {
+            background-color: #f1e206;
+            background-image: linear-gradient(to right, #f1e206 0%, #835900 100%);
+            color: #fff
+        }
+
+        .popular-game-title-container .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px
+        }
+
+        .popular-game-title-container .title .popular-games-icon {
+            margin-right: 10px
+        }
+
+        .popular-game-title-container .title {
+            font-size: var(--large-font);
+            display: flex;
+            align-items: center
+        }
+
+        .popular-game-title-container a {
+            padding: 6px 8px;
+            border-radius: 25px;
+            font-size: 10px;
+            background-color: rgba(252, 247, 0, 0.64);
+            color: #fff
+        }
+
+        .bigger-game-list ul {
+            padding: 5px 0;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style-type: none
+        }
+
+        .bigger-game-list ul>li {
+            max-width: calc(100%/3 - 10px);
+            min-width: calc(100%/4 - 10px);
+            flex-basis: 133px;
+            padding: 5px;
+            text-align: center;
+            color: #fff;
+            font-size: 80%
+        }
+
+        .bigger-game-list ul .inner-game-item {
+            margin: 0;
+            padding: 5px;
+            border-radius: 25px;
+            background-color: #1e1a31;
+            background-image: linear-gradient(to bottom, #1e1a31 0%, #171429 100%);
+            display: block;
+            font-weight: normal
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container {
+            display: block;
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            margin-bottom: 5px;
+            border-radius: 25px;
+            overflow: hidden
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container>amp-img,
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container>amp-img {
+            background-color: #000;
+            transition: transform .2s;
+            transform-origin: center
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            background-color: rgba(243, 207, 3, 0.85)
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container>a {
+            margin: 0
+        }
+
+        .bigger-game-list ul .inner-game-item .game-name {
+            display: block;
+            margin: 8px 0 4px;
+            padding: 0 5px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis
+        }
+
+        .bigger-game-list ul input[type="radio"] {
+            position: absolute;
+            visibility: hidden;
+            left: -99em
+        }
+
+        .bigger-game-list ul input[type="radio"]:not(:checked)~.wrapper-container .game-link-container {
+            display: none
+        }
+
+        .bigger-game-list ul input[type="radio"]:checked~.wrapper-container>amp-img {
+            transform: scale(1.25)
+        }
+
+        .play-now {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.2em;
+            border-radius: 18px;
+            padding: 5px;
+            background-color: #f8007e;
+            background-image: linear-gradient(to right, #f8007e 0%, #a500e0 100%);
+            color: #fff;
+            width: 80%
+        }
+
+        .contact-list-container {
+            margin-top: 10px;
+            background: #332a63;
+            background-image: linear-gradient(to bottom, #332a63 0%, #221c40 100%)
+        }
+
+        .footer-container .contact-list {
+            justify-content: center
+        }
+
+        .footer-container .contact-list li a {
+            background-color: #0a0814;
+            padding: 3px 15px 3px 3px;
+            font-size: var(--small-font)
+        }
+
+        .footer-container .contact-list>li a i {
+            width: 35px;
+            height: 35px;
+            background-color: #20254f
+        }
+
+        .footer-container .social-media-list li {
+            flex-basis: auto;
+            margin: 10px
+        }
+
+        .footer-container .footer-links {
+            background-color: #141125;
+            align-items: center
+        }
+
+        .footer-container .footer-links li {
+            flex-basis: auto;
+            padding: 2.5px 10px
+        }
+
+        .footer-container .footer-links li a {
+            color: #f5c904
+        }
+
+        .footer-container .footer-links>li:not(:nth-child(5n+5)):not(:first-child) {
+            border: none
+        }
+
+        .fixed-footer a {
+            background-color: inherit;
+            flex-basis: calc((100% - 15px*6)/5);
+            max-width: 75px;
+            color: #736d99;
+            font-size: var(--small-font)
+        }
+
+        .fixed-footer a.active {
+            color: #ff35ed
+        }
+
+        .fixed-footer .center {
+            transform: scale(2.5) translateY(-5px);
+            background: center no-repeat;
+            background-size: contain;
+            background-color: inherit;
+            border-radius: 50%
+        }
+
+        .fixed-footer amp-img {
+            max-width: 40%;
+            margin-bottom: 5px
+        }
+
+        .fixed-footer .live-chat-icon {
+            animation: pulse 3s infinite
+        }
+
+        body {
+            background: #273341
+        }
+
+        .logo-container {
+            background: #000000
+        }
+
+        .header-right .register-section {
+            border-right-color: #4d5054
+        }
+
+        .site-menu-trigger [data-icon=menu] {
+            background-color: #f7f7f7
+        }
+
+        .site-menu {
+            background-color: #0a0a0a
+        }
+
+        .site-menu li+li,
+        .site-menu details article {
+            border-color: #0e0e0e
+        }
+
+        .site-menu li>a,
+        .site-menu summary,
+        .site-menu details details summary,
+        .site-menu details li>a,
+        .site-menu details details li>a {
+            border-color: #4a4a4a;
+            color: #ffffff;
+            background-color: #161616
+        }
+
+        .site-menu>ul>li:first-child>a,
+        .site-menu details[open]>summary,
+        .site-menu details[open]>summary details[open]>summary {
+            border-left-color: #ffeb00;
+            color: #fff
+        }
+
+        .link-container {
+            background-color: #141414;
+            background-image: linear-gradient(to right, #141414 0%, #000 100%)
+        }
+
+        .main-menu-container {
+            background-color: inherit
+        }
+
+        .main-menu-container .amp-carousel-button-next,
+        .main-menu-container .amp-carousel-button-prev {
+            background-color: #949100;
+            color: #484848
+        }
+
+        .main-menu-container li a {
+            color: #e7d001
+        }
+
+        .jackpot-container {
+            background-color: rgba(21, 21, 21, .83);
+            color: #fff;
+            text-shadow: 0 2px 22px #13f703
+        }
+
+        .popular-game-title-container {
+            background-color: #50c22e;
+            background: linear-gradient(to right, #50c22e 0%, #2a7118 100%);
+            color: #fff
+        }
+
+        .popular-game-title-container a {
+            background-color: #0eff00;
+            color: #000
+        }
+
+        .bigger-game-list ul>li {
+            color: #fff
+        }
+
+        .bigger-game-list ul .inner-game-item {
+            background-color: #1fa007;
+            background-image: linear-gradient(to bottom, #1fa007 0%, #184e05 100%)
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container>amp-img {
+            background-color: #000
+        }
+
+        .bigger-game-list ul .inner-game-item .wrapper-container .game-link-container {
+            background-color: rgba(253, 194, 0, 0.85)
+        }
+
+        .play-now {
+            background: #26700c;
+            background-image: linear-gradient(to right, #26700c 0%, #16e601 100%);
+            color: #fff
+        }
+
+        .register-button {
+            background: #c8014e
+        }
+
+        .login-button {
+            background: transparent;
+            border: 1px solid #ff9400
+        }
+
+        .footer-container {
+            color: #ffffff
+        }
+
+        .footer-container .contact-list-container {
+            background: #273341
+        }
+
+        .footer-container .contact-list li a {
+            background-color: #c8014e;
+            color: #ffffff
+        }
+
+        .footer-container .contact-list>li a i {
+            background-color: #084654
+        }
+
+        .footer-container .footer-links {
+            background-color: inherit
+        }
+
+        .footer-container .footer-links li a {
+            color: #fff
+        }
+
+        .site-description {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        .fixed-footer a {
+            background-color: inherit;
+            color: #ffffff
+        }
+
+        .fixed-footer a.active {
+            color: #fecf00
+        }
+
+        table.tbuah {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+            font-size: calc(8px+1vh);
+            margin: 0 20px 0 0;
+        }
+
+        table.tbuah td,
+        table.tbuah th {
+            border: 1px solid #0b9ab1;
+            padding: 10px 5px 10px;
+        }
+
+        table.tbuah tbody td {
+            font-size: calc(8px+1vh);
+            font-weight: 500;
+            color: #ffffff;
+        }
+
+        table.tbuah thead {
+            background: #ffd410;
+        }
+
+        table.tbuah thead th {
+            font-size: calc(12px+1vh);
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            background: #c8014e
+        }
+
+        p {
+            text-align: justify
+        }
+    </style>
+
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <link itemprop="mainEntityOfPage" rel="canonical" href="https://dev.dontkillmyapp.com/">
+    <link rel="shortcut icon" type="image/x-icon" sizes="32x32" href="https://imgur.com/m3uxdo4.png">
+    <title>RTP Daftar Situs Judi Slot Pulsa Lotus89 Anti Rungkad</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Pola RTP slot anti rungkad? Hanya ada di Lotus89 yang merupakan situs daftar judi online slot pulsa. Promo wcb modal awal kurang beruntung di ganti 100% tanpa TO." />
+    <meta name="keywords" content="situs slot, slot pulsa, rtp slot anti rungkad, slot online" />
+    <meta name="robots" content="index,follow">
+    <meta name="language" content="Indonesia">
+    <meta name="author" content="Lotus89">
+    <meta name="googlebot" content="index,follow" />
+    <meta property="og:url" content="https://dev.dontkillmyapp.com/" />
+    <meta property="og:image" content="https://imgur.com/T2aXC69.jpg" />
+    <meta property="og:title" content="RTP Daftar Situs Judi Slot Pulsa Lotus89 Anti Rungkad" />
+    <meta property="og:description" content="Pola RTP slot anti rungkad? Hanya ada di Lotus89 yang merupakan situs daftar judi online slot pulsa. Promo wcb modal awal kurang beruntung di ganti 100% tanpa TO." />
+    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" href="https://imgur.com/m3uxdo4.png" />
+    <meta name="google-site-verification" content="0u-_cvS3MqRE71ulYHofxz1PQI1wx6ZFDoGYV5uxNtw" />
+
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Game",
+            "name": "Pola RTP Slot Pulsa Anti Rungkad",
+            "author": {
+                "@type": "Person",
+                "name": "RTP Slot Pulsa"
+            },
+            "headline": "RTP Daftar Situs Judi Slot Pulsa Lotus89 Anti Rungkad",
+            "description": "Pola RTP slot anti rungkad? Hanya ada di Lotus89 yang merupakan situs daftar judi online slot pulsa. Promo wcb modal awal kurang beruntung di ganti 100% tanpa TO.",
+            "keywords": ["situs slot, slot pulsa, rtp slot anti rungkad, slot online"],
+            "image": "https://imgur.com/T2aXC69.jpg",
+            "url": "https://imgur.com/T2aXC69.jpg",
+            "publisher": {
+                "@type": "Organization",
+                "name": "RTP Slot Pulsa"
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue" : "99",
+                "ratingCount" : "9778899",
+                "reviewCount" : "99",
+                "worstRating" : "0",
+                "bestRating" : "100"
+            },
+            "inLanguage": "id-ID"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "RTP Slot Pulsa",
+            "alternateName": "Slot Pulsa",
+            "url": "https://dev.dontkillmyapp.com/",
+            "logo": "https://imgur.com/sRUfASr.png",
+            "sameAs": "https://dev.dontkillmyapp.com/"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://dev.dontkillmyapp.com/"
+            },
+            "headline": "RTP Daftar Situs Judi Slot Pulsa Lotus89 Anti Rungkad",
+            "description": "Pola RTP slot anti rungkad? Hanya ada di Lotus89 yang merupakan situs daftar judi online slot pulsa. Promo wcb modal awal kurang beruntung di ganti 100% tanpa TO.",
+            "image": [
+                "https://imgur.com/T2aXC69.jpg"
+            ],
+            "author": {
+                "@type": "Organization",
+                "name": "Slot Pulsa",
+                "url": "https://dev.dontkillmyapp.com/"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "RTP Slot Pulsa",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://imgur.com/sRUfASr.jpg"
+                }
+            },
+            "datePublished": "2022-07-10T15:15:15+00:00",
+            "dateModified": "2022-07-10T15:15:15+00:00"
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://dev.dontkillmyapp.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "RTP Slot Pulsa",
+                    "item": "https://dev.dontkillmyapp.com/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "RTP Daftar Situs Judi Slot Pulsa Lotus89 Anti Rungkad"
+                }
+            ]
+        }
+    </script>
+
+</head>
+
+<body>
+    <amp-analytics type="gtag" data-credentials="include">
+        <script type="application/json">
+            {
+                "vars": {
+                    "gtag_id": "G-YM8C9XR1QW",
+                    "config": {
+                        "G-YM8C9XR1QW": {
+                            "groups": "default"
+                        }
+                    }
+                }
+            }
+        </script>
+    </amp-analytics>
+    
+    <div class="logo-container">
+        <a href="https://dev.dontkillmyapp.com/" class="logo">
+            <amp-img layout="responsive" height="52" width="175" src="https://imgur.com/sRUfASr.png" noloading></amp-img>
+        </a>
+        <div class="header-right">
+            <span class="register-section">
+                <a href="https://lotus89.xn--6frz82g/?content=register" rel="nofollow" class="register-button" title="Daftar Slot Pulsa" target="_blank">Daftar</a></span>
+            <span class="register-section">
+                <a href="https://lotus89.xn--6frz82g/?content=register" rel="nofollow" class="register-button" title="Login Slot Pulsa" target="_blank">Login</a>
+            </span>
+        </div>
+    </div>
+
+
+    <amp-carousel class="carousel-container" layout="responsive" width="1900" height="452" type="slides" autoplay delay="2000" loop>
+        <amp-img title="Pola RTP Slot Pulsa" src="https://imgur.com/T2aXC69.jpg" alt="slot online" width="1900" height="452" layout="responsive"></amp-img>
+    </amp-carousel>
+
+
+
+    <footer class="footer-container">
+        <div class="contact-list-container">
+            <ul class="contact-list container">
+                <li>
+                    <a href="https://lotus89.xn--6frz82g/?content=register" target="_blank" rel="nofollow noreferrer">
+                            <i>
+                                <amp-img layout="responsive" height="80" width="80" src="https://imgur.com/po48IMO.png"></amp-img>
+                            </i>
+                            Login
+                        </a>
+                </li>
+                <li>
+                    <a href="https://lotus89.xn--6frz82g/?content=register" target="_blank" rel="nofollow noreferrer">
+                            <i>
+                                <amp-img layout="responsive" height="80" width="80" src="https://imgur.com/VFl2bGN.png"></amp-img>
+                            </i>
+                            Daftar
+                        </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="site-description">
+            <div class="container">
+                <table class="tbuah" style="width:100%; background:#c8014e">
+                    <thead>
+                        <tr>
+                            <th colspan="3">RTP Daftar Situs Judi Slot Pulsa Lotus89 Anti Rungkad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px;">Minimal Slot Deposit</td>
+                            <td style="padding: 10px;">💰Rp10.000</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Minimal Slot Withdraw</td>
+                            <td style="padding: 10px;">💰Rp50.000</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Waktu Deposit</td>
+                            <td style="padding: 10px;">1 Menit</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Waktu Penarikan</td>
+                            <td style="padding: 10px;">3 Menit</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Promo Terbaru</td>
+                            <td style="padding: 10px;">WCB Modal Awal Kurang Beruntung di Ganti 100% Tanpa TO</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Top Provider Slot Online</td>
+                            <td style="padding: 10px;">Pragmatic Play, Microgaming, PGSoft dan Joker123</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Metode</td>
+                            <td style="padding: 10px;">💵 Transfer Bank,💶 E-Wallet,💷 Pulsa</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Mata Uang</td>
+                            <td style="padding: 10px;">🏦IDR (Indonesian Rupiah)🏦</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px;">Jam Operasional</td>
+                            <td style="padding: 10px;">🥇24 Jam Online🥇</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h1><span style="color: #ffb600;text-align: center;">RTP Daftar Situs Judi Slot Pulsa Lotus89</span></h1>
+
+                <p style="text-align: justify;"><strong>Lotus89</strong> merupakan situs <a href="https://dev.dontkillmyapp.com/" style="color: #ffb600">judi slot deposit pulsa</a> yang paling banyak dicari sebab sediakan RTP slot gacor hari ini. Dengan disediakannya fitur rtp slot gacor member akan bersama dengan terlampau mudah bermain judi slot online. Anda mampu menyaksikan game slot online mana yang membawa tingkat kemenangan tertinggi. Banyak sekali bocoran rtp slot online gacor hari ini di situs judi slot online Lotus89. Jangan anda lewatkan untuk bergabung dan daftar di situs slot online resmi indonesia saat ini terhitung sebab anda miliki banyak peluang menang yang besar waktu bermain slot online.</p>
+                <p style="text-align: justify;">Sebelum membicarakan lebih lanjut Lotus akan menyebutkan khususnya dahulu agar anda lebih mengenal perihal RTP Live slot terbaik indonesia. Pastinya anda pernah mengenal istilah RTP, Banyak orang sebelum saat bermain untuk menyaksikan RTP Slot, terhadap kelslempatan kali ini mimin akan membicarakan perihal apa itu RTP?</p>
+                <p style="text-align: justify;">RTP merupakan suatu singkatan berasal dari kata Return to Player, istilah RTP ini sering sekali ditanyakan banyak pemain slot online sebelum saat main judi slot online, untuk sadar berapa besar membawa tingkat kemenangan terhadap setiap game slot pulsa terpercaya.</p>
+                <p style="text-align: justify;">Sebagai situs resmi judi slot online resmi indonesia membawa kandungan RTP slot sebesar 90% yang bermakna uang setiap pemain akan dikembalikan sebesar 90% berasal dari total kuantitas nilai taruhan yang dimainkan oleh player slot online.</p>
+                <p style="text-align: justify;">Cara Daftar Situs Judi Online Slot Gacor<br />Cara daftar rtp slot gacor deposit pulsa terlampau mudah sekali, pastikan anda telah berada di situs judi slot online terpercaya waktu ini. Anda hanya kudu mendatangi halaman pendaftaran rtp slot gacor hari ini lantas mengisi form pendaftaran bersama dengan information bank dan information diri yang valid. Situs judi online di indonesia banyak sekali mengimbuhkan keuntungan waktu main slot gacor terbaik di indonesia. Situs judi online terpercaya indonesia sediakan service 24 nonstop tanpa hari libur. Jika berlangsung halangan waktu bermain rtp slot gacor anda mampu berharap dukungan daftar slot online melalui live chat, bersama dengan senang hati customer service kami akan membantu anda.</p>
+                <p style="text-align: justify;">Berikut ini merupakan form pendaftaran rtp slot online yang kudu anda mengisi sebelum saat anda mampu bermain game slot online terbaik.</p>
+                <p style="text-align: justify;">Email:<br />Rekening Bank:<br />User ID Game:<br />Password:</p>
+                <p style="text-align: justify;">Hanya hanya kudu mengisi form pendaftaran seperti di atas telah mampu terdaftar di situs slot deposit pulsa.</p>
+
+                <h2><span>Agen Slot Deposit Pulsa Terpercaya Indonesia</span></h2>
+
+                <p style="text-align: justify;">Agen <a href="https://dev.dontkillmyapp.com/" style="color: #ffb600">slot pulsa</a> terpercaya Lotus89 yang merupakan situs judi slot online resmi Indonesia. Menyediakan permainan judi slot online terpercaya yang membawa banyak keuntungan. Anda mampu main bersama dengan terlampau mudah hanya bersama dengan pakai ponsel yang membuka internet mampu bermain slot online bersama dengan mudah.</p>
+                <p style="text-align: justify;">Selain mampu dimainkan bersama dengan pakai ponsel, RTP slot gacor terhitung support pakai Laptop maupun Pc yang membuka Internet. Agen slot deposit pulsa terlampau mudah sekali dimainkan, untuk jalankan slot deposit pulsa gacor terlampau gampang, anda hanya lumayan transfer pulsa bersama dengan minimum 10rb telah berkesempatan menang hingga jutaan rupiah.</p>
+
+                <h2><span style="color: #ffb600">Cara Mengetahui Angka RTP Live Slot Gacor</span></h2>
+
+                <p style="text-align: justify;">Cara sadar angka RTP slot online terlampau mudah sekali pemain hanya mampu menyaksikan Angka RTP slot gacor yang akan anda mainkan terhadap waktu ini. Ketika anda anda telah masuk ke di dalam permainan anda mampu jalankan klik di anggota Info RTP Slot online yang umumnya ditandai bersama dengan huruf I di bawah pojok kiri.</p>
+                <p style="text-align: justify;">Dan disana terdapat berbagai macam jenis informasi, yang terlampau mendetail, seputar permainan slot deposit pulsa rtp slot pragmatic yang nanti akan di dimainkan dan terhitung kandungan RTP slot hari ini. Tapi anda terhitung nggak boleh kuatir sebab hanya di situs slot online yang mengimbuhkan kepuasan dan service terbaik.</p>
+                <p style="text-align: justify;">RTP slot hari ini bermakna setiap harinya akan di update oleh tim kami dan akan merangkumnya di dalam wujud RTP Slot onlline di dalam wujud kandungan terhadap setiap game yang telah dimiliki.</p>
+
+                <h2><span style="color: #ffb600">Bocoran RTP Live Slot Deposit Pulsa</span></h2>
+
+                <p style="text-align: justify;">Selamat berkunjung di situs RTP live slot gacor dan juga keterangan slot gacor dan bocoran slot hari ini berasal dari situs Lotus89, bersumber terhadap RTP live slot gacor kami mampu beroleh information perihal slot yang lagi gacor terhadap waktu ini. Banyak terhitung bocoran slot online deposit pulsa yang terpapar bersama dengan kandungan yang teruji akurat. RTP live slot deposit pulsa waktu ini telah banyak dicari oleh pemain slot online, tidak hanya mengimbuhkan keuntungan yang besar pemain RTP Slot deposit pulsa gacor mampu nikmati game yang bermacam- macam berbagai. Ratusan jenis game slot yang waktu ini mampu secara acak merendahkan drop cash dan juga kami terhitung tidak mampu sembarang memngira-ngira di permainan slot manakah akan beroleh jackpot. Maka berasal dari situ keterangan bocoran slot gacor ini mampu Kamu pakai agar tidak mengalami kekalahan yang besar bermain slot pulsa.</p>
+                <p style="text-align: justify;">Realitas di dalam bermain slot itu benar-benar pula mengandalkan hoki, sebab ribuan member yang bermain terhadap setiap harinya, banyak terhitung yang beroleh kemenangan. Tetapi jangan putus asa hingga disini, sebab bersama dengan memakai RTP live slot deposit pulsa kami mampu meminimalkan kekalahan dan juga lebih-lebih mampu saja beroleh jackpot terbanyak di tiap platform slot online. Bocoran slot gacor sering update setiap harinya dan juga keterangan slot gacor hari ini terhitung berlaku untuk semua permainan slot online yang tersedia di situs slot deposit pulsa Lotus89.</p>
+                <p style="text-align: justify;">Perihal yang butuh di ingat jikalau RTP live yang kami sediakan ini bukan hanya tipuan, banyak yang telah mengusahakan menjajaki situs keterangan slot terpercaya ini dan juga menciptakan banyak keuntungan. Namun kami tidak mengharuskan membuat memakai RTP live khususnya dahulu waktu sebelum saat bermain di situs Lotus89, sebab ini semua ialah sarana bonus kami agar mampu mengimbuhkan kepuasan kepada tiap pemain slot di Indonesia.</p>
+
+
+
+                <h2><span style="color: #ffb600">Rekomendasi Provider Slot Dengan RTP Live Slot Gacor</span></h2>
+                <p style="text-align: justify;">Sebagai situs daftar slot deposit pulsa terpercaya yang membawa bocoran slot gacor terakurat, kami telah menganalisis dan juga membawa dampak kemenangan pemain slot jadi nyata, dan juga mengusahakan terus. Lotus89 jadi area taruhan judi slot yang mudah menang. Jadi agen slot gacor, kami pula membawa banyak jenis permainan slot online yang mampu dimainkan bersama dengan hanya memakai 1 user ID saja. Berikut ini merupakan beberapa provider bersama dengan <a href="https://dev.dontkillmyapp.com/" style="color: #ffb600">RTP slot gacor</a> yang akurat:</p>
+                <p style="text-align: justify;">RTP Live Slot Pragmatic</p>
+                <p style="text-align: justify;">RTP Live Slot Joker123</p>
+                <p style="text-align: justify;">RTP Live Slot PG Soft</p>
+                <p style="text-align: justify;">RTP Live Slot Habanero</p>
+                <p style="text-align: justify;">RTP Live Slot CQ9</p>
+                <p style="text-align: justify;">RTP Live Slot Microgaming</p>
+                <p style="text-align: justify;">RTP Live Slot Top Trend</p>
+                
+                <h2><span style="color: #ffb600">Situs Judi Slot Deposit Pulsa Dengan Fitur RTP Slot</span></h2>
+                <p style="text-align: justify;">Anda telah berada di situs slot yang terlampau terpercaya dan juga terlampau nyaman untuk bermain slot online deposit pulsa. Kami percaya jikalau pemain slot di Indonesia merupakan pemain yang pandai di dalam memilih situs slot gacor hari ini, dan juga Lotus89 merupakan opsi yang cocok membuat anda, yang berani membayar semua kemenangan bersama dengan waktu 2 menit saja. Buktikan sendiri bermain di agen slot Lotus89 yang miliki RTP live slot gacor yang akurat. Untuk bermain game slot deposit pulsa 10ribu saja lho! Pastinya bersama dengan modal minimum telah mampu bermain di semua jenis permainan.</p>
+
+                <h3><span style="color: #ffb600">FAQ - Lotus89 RTP Slot Deposit Pulsa Gacor Hari Ini</span></h3>
+                p style="text-align: justify;"><strong>Apa Itu RTP Slot Gacor Lotus89 ?</strong><br />RTP slot gacor merupakan situs judi slot deposit pulsa yang sediakan bocoran RTP Slot Gacor Hari ini, secara realtime di indonesia. Dengan fitur RTP Live slot di mengharapkan setiap member mampu bermain dan beroleh kemenangan waktu bermain game slot online di Lotus89.</p>
+                <p style="text-align: justify;"><strong>Apa Itu Slot Deposit Pulsa ?</strong><br />Slot deposit pulsa merupakan penyedia sarana game slot online yang menerima deposit pakai pulsa, bersama dengan tersedia program ini di harapakan member Lotus89 mampu bersama dengan mudah jalankan transaksi sebelum saat bermain slot online.</p>
+                <p style="text-align: justify;"><strong>Apa Keuntungan Rtp Live Slot Deposit Pulsa ?</strong><br />Rtp slot deposit pulsa banyak sekali membawa keuntungan waktu anda bergabung bersama dengan situs judi slot online resmi, sebab Lotus89 merekomendasikan game slot gacor hari ini, anda mampu bermain slot deposit pulsa bersama dengan cara transfer pakai pulsa XL, Telkomsel dll.</p>
+
+
+            </div>
+        </div>
+
+
+    </footer>
+    <div class="fixed-footer">
+        <a href="https://tawk.to/chat/620cce571ffac05b1d7a25bb/1fs10c1qi" rel="nofollow" target="_blank">
+            <amp-img class="live-chat-icon" layout="intrinsic" height="60" width="75" src="https://imgur.com/wn3pshg.png" alt="LiveChat Slot Pulsa Lotus89"></amp-img>
+            Livechat
+        </a>
+        <a href="https://lotus89.xn--6frz82g/?content=register" rel="nofollow" class="js_live_chat_link live-chat-link" target="_blank">
+            <amp-img class="live-chat-icon" layout="intrinsic" height="110" width="110" src="https://imgur.com/VFl2bGN.png" alt="Daftar Slot Pulsa Lotus89"></amp-img>
+            Daftar
+        </a>
+        <a href="https://lotus89.xn--6frz82g/?content=register" rel="nofollow" target="_blank">
+            <amp-img class="live-chat-icon" layout="intrinsic" height="75" width="75" src="https://imgur.com/po48IMO.png" alt="Bonus Slot Pulsa Lotus89"></amp-img>
+            Login
+        </a>
+    </div>
+</body>
+
+</html>
